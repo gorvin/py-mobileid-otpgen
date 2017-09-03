@@ -25,12 +25,12 @@ def generateOTPValue(seed):
 
 
 if __name__ == '__main__':
-    if (len(sys.argv) != 2):
+    if len(sys.argv) != 2:
         sys.exit("Usage: %s [18 digit token seed]" % basename(sys.argv[0]))
 
     seed = sys.argv[1]
 
-    if (len(seed) != 18):
+    if len(seed) != 18:
         sys.exit("Error, seed must be 18 digits")
 
     print("%s" % generateOTPValue(seed))
